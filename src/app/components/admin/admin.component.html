@@ -1,0 +1,18 @@
+<div class="container pt-2-head">
+  <div class="card">
+    <table class="table table-hover table-striped">
+      <thead>
+        <tr>
+          <th>ชื่อ</th>
+          <th>แก้ไข</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of members">
+          <td>{{data.name}}</td>
+          <td [routerLink]="['/admin/edit', data._id]" class="pointer-underline">แก้ไข</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
